@@ -19,8 +19,6 @@ enum ReporterInfo
 	ERROR = 0xff
 };
 
-// TODO: Maybe use a strategy for saving in memory or file stream
-
 class Reporter {
 public:
 	Reporter();
