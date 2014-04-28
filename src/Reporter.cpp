@@ -14,6 +14,3 @@ Reporter::Reporter() {
 Reporter::~Reporter() {
 
 }
-
-// Is it working?
-// Looks like it's not working?
