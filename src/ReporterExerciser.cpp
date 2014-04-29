@@ -6,10 +6,25 @@
  */
 
 #include <iostream>
+
+#include "Reporter.h"
+
 using namespace std;
+
+void test()
+{
+	Reporter* rep = Reporter::getInstance();
+	rep->setOutput(MEMORY_OUTPUT);
+
+	Reporter* rep2 = Reporter::getInstance();
+	delete rep;
+	delete rep2;
+}
 
 int main()
 {
 	cout << "Using reporter..." << endl;
+	test();
+
 	return 0;
 }

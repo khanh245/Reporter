@@ -10,6 +10,9 @@
 
 #include <iostream>
 #include <string>
+
+#include "ReportingStrategies/IReportStrategy.h"
+
 using namespace std;
 
 enum ReporterInfo
@@ -19,10 +22,32 @@ enum ReporterInfo
 	ERROR = 0xff
 };
 
-class Reporter {
+enum OutputType
+{
+	NONE = 0x00,
+	FILE_OUTPUT = 0x01,
+	MEMORY_OUTPUT = 0x02
+};
+
+class Reporter
+{
 public:
+	static Reporter* getInstance();
+
+	~Reporter();
+
+	void setOutput (const OutputType& type = NONE);
+	bool report();
+
+protected:
+	IReportStrategy* mReportStrat;
+
+	void CleanUp();
+
+private:
 	Reporter();
-	virtual ~Reporter();
+	Reporter(const Reporter&);
+	void operator=(const Reporter&);
 };
 
 #endif /* REPORTER_H_ */

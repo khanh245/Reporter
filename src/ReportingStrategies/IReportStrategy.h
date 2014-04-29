@@ -11,8 +11,11 @@
 class IReportStrategy
 {
 public:
-	virtual ~IReportStrategy();
+	virtual ~IReportStrategy() { }
+	virtual bool write() = 0;
 
+protected:
+	char* mData;
 };
 
 
