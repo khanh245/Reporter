@@ -18,7 +18,6 @@ void test()
 
 	Reporter* rep2 = Reporter::getInstance();
 	delete rep;
-	delete rep2;
 }
 
 int main()

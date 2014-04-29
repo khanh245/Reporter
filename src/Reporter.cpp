@@ -26,7 +26,7 @@ Reporter::~Reporter()
 	CleanUp();
 }
 
-void Reporter::setOutput(const OutputType& type)
+void Reporter::setOutput(const OutputMethod& type)
 {
 	CleanUp();
 

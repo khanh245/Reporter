@@ -19,10 +19,10 @@ enum ReporterInfo
 {
 	INFORMATION = 0x00,
 	WARNING = 0x01,
-	ERROR = 0xff
+	ERROR = 0x02
 };
 
-enum OutputType
+enum OutputMethod
 {
 	NONE = 0x00,
 	FILE_OUTPUT = 0x01,
@@ -36,7 +36,7 @@ public:
 
 	~Reporter();
 
-	void setOutput (const OutputType& type = NONE);
+	void setOutput (const OutputMethod& type = NONE);
 	bool report();
 
 protected:
