@@ -13,10 +13,11 @@ using namespace std;
 
 void test()
 {
-	Reporter* rep = Reporter::getInstance();
+	Reporter* rep = Reporter::createReporter();
 	rep->setOutput(MEMORY_OUTPUT);
 
-	Reporter* rep2 = Reporter::getInstance();
+	Reporter* rep2 = Reporter::createReporter();
+	rep2->setOutput(FILE_OUTPUT);
 	delete rep;
 }
 

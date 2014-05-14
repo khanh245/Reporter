@@ -17,9 +17,13 @@ using namespace std;
 
 enum ReporterInfo
 {
-	INFORMATION = 0x00,
-	WARNING = 0x01,
-	ERROR = 0x02
+	DEBUG 		= 0x00,
+	INFORMATION = 0x01,
+	WARNING 	= 0x02,
+	ERROR 		= 0x03,
+	CRITICAL	= 0x04,
+	ALERT		= 0x05,
+	EMERGENCY	= 0xff
 };
 
 enum OutputMethod
@@ -32,7 +36,7 @@ enum OutputMethod
 class Reporter
 {
 public:
-	static Reporter* getInstance();
+	static Reporter* createReporter();
 
 	~Reporter();
 

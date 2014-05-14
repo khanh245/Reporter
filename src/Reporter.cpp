@@ -8,7 +8,7 @@
 #include "Reporter.h"
 #include "ReportingStrategies/Strategies.h"
 
-Reporter* Reporter::getInstance()
+Reporter* Reporter::createReporter()
 {
 	static Reporter* uniqueInstance;
 	if (uniqueInstance == NULL)
