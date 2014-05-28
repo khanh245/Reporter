@@ -3,6 +3,9 @@
  *
  *  Created on: Apr 28, 2014
  *      Author: khanhn
+ *
+ *  Purpose: A static singleton reporter that reports log
+ *  		 to file or memory
  */
 
 #ifndef REPORTER_H_
@@ -15,7 +18,7 @@
 
 using namespace std;
 
-enum ReporterInfo
+enum LogInfo
 {
 	DEBUG 		= 0x00,
 	INFORMATION = 0x01,
@@ -30,7 +33,7 @@ enum OutputMethod
 {
 	NONE = 0x00,
 	FILE_OUTPUT = 0x01,
-	MEMORY_OUTPUT = 0x02
+	MEMORY_OUTPUT = 0x02,
 };
 
 class Reporter

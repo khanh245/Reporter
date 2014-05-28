@@ -9,7 +9,7 @@
 #define STRATEGIES_H_
 
 #include "MemoryStrat.h"
-
+#include "FileStrat.h"
 
 
 #endif /* STRATEGIES_H_ */

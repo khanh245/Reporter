@@ -33,7 +33,7 @@ void Reporter::setOutput(const OutputMethod& type)
 	switch(type)
 	{
 	case FILE_OUTPUT:
-
+		mReportStrat = new FileStrat();
 		break;
 	case MEMORY_OUTPUT:
 		mReportStrat = new MemoryStrat();
